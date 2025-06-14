@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variable</title>
+    </head> 
+
+    <body>
+        <p>
+            Cart Quantity
+        </p>
+        <p>
+            <button onclick="console.log(`CartQuantity: ${CartQuantity}`)">Show Quantity</button>
+            <button onclick="
+                if (CartQuantity<10) {
+                    CartQuantity ++; console.log(`CartQuantity: ${CartQuantity}`)
+                }else{
+                    alert('The car is full')
+                }
+            ">Add to Cart</button>
+            <button onclick="
+                if (CartQuantity<9) {
+                    CartQuantity +=2; console.log(`CartQuantity: ${CartQuantity}`)
+                }else{
+                    alert('The car is full')
+                }
+            ">+2</button>
+            <button onclick="
+                if (CartQuantity<8) {
+                    CartQuantity +=3; console.log(`CartQuantity: ${CartQuantity}`)
+                }else{
+                    alert('The car is full')
+                }
+            ">+3</button>
+            <button onclick="CartQuantity = 0; console.log(`CartQuantity: ${CartQuantity}`)">Reset Cart</button>
+        </p>
+        <p>
+            <button onclick="
+                if (CartQuantity>0) {
+                    CartQuantity --; console.log(`CartQuantity: ${CartQuantity}`)
+                }else{
+                    alert('Not enough items')
+                }
+            ">Remove to Cart</button>
+            <button onclick="
+                if (CartQuantity>1) {
+                    CartQuantity -=2; console.log(`CartQuantity: ${CartQuantity}`)
+                }else{
+                    alert('Not enough items')
+                }
+            ">-2</button>
+            <button onclick="
+                if (CartQuantity>2) {
+                    CartQuantity -=3; console.log(`CartQuantity: ${CartQuantity}`)
+                }else{
+                    alert('Not enough items')
+                }
+            ">-3</button>
+        </p>
+         <script>
+            let CartQuantity = 0 
+         </script>
+    </body>
+
+   
+</html>
