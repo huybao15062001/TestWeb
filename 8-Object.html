@@ -6,7 +6,7 @@
 
     <body>
         <script>
-            const product = {
+            /*const product = {
                 name: 'socks',
                 price: 1090,
                 rating: {
@@ -23,6 +23,52 @@
             console.log(product.price)
             console.log(product.rating.stars)
             product.func()
+
+            console.log(JSON.stringify(product))
+            console.log(JSON.parse(JSON.stringify(product)))
+            */
+
+            console.log('hello'.toUpperCase())
+
+            const objects1 = {
+                messgae: 'hello'
+            }
+
+            const objects2 = objects1
+            objects1.messgae = 'good job'
+            console.log(objects2)
+            console.log(objects1)
+
+            const objects3 = {
+                messgae: 'good job'
+            }
+            console.log(objects1 === objects3)
+            console.log(objects1 === objects2)
+            console.log(objects1.messgae === objects3.messgae)
+
+            const objects4 = {
+                messgae: 'good job',
+                price:799
+            }
+            //const messgae = objects4.messgae
+            const {messgae, price} = objects4
+            console.log(messgae)
+            console.log(price)
+
+            const objects5 = {
+                //messgae: messgae
+                messgae,
+
+                /*method: function function1(){
+                    console.log('method')
+                }*/
+
+                method() {
+                    console.log('method')
+                }
+            }
+            console.log(objects5)
+            objects5.method()
         </script>
     </body>
 

@@ -16,22 +16,18 @@
             rockPaperScissors('Scissors')     
         ">Scissors</button>
         <button onclick="
-           score = {
-                    Win:0,
-                    Lose:0,
-                    Tie:0
-                }
+           localStorage.removeItem('score')
             alert('Reset Score')
         ">Reset Result</button>
         
         <script>
 
-            let score = {
+            let score = JSON.parse(localStorage.getItem('score')) || {
                     Win:0,
                     Lose:0,
                     Tie:0
                 }
-
+            
             function rockPaperScissors(yourChoose){
                 const randomNum = Math.random()
                 let computerChoose = ''
@@ -57,6 +53,9 @@
                     result = 'Lose'
                     score.Lose+=1
                 }
+
+                localStorage.setItem('score',JSON.stringify(score))
+
                 alert(`You choose ${yourChoose}, Computer choose ${computerChoose}, ${result} \n Win: ${score.Win}, Lose: ${score.Lose}, Tie: ${score.Tie}` )
             }
         </script>
