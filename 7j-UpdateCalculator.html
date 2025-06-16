@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <button onclick="updateCalculator('1')">1</button>
+        <button onclick="updateCalculator('2')">2</button>
+        <button onclick="updateCalculator('3')">3</button>
+        <button onclick="updateCalculator('+')">+</button>
+        <button onclick="calculator =eval(calculator); console.log(calculator)">=</button>
+    </body>
+    <script>
+        let calculator = '';
+        function updateCalculator(button) {
+            calculator += button
+            console.log(calculator)
+        }
+    </script>
+</html>
