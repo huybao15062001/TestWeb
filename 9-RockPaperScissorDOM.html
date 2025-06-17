@@ -6,19 +6,21 @@
 
     <body>
         <p>Rock Paper Scissors</p>
-        <button onclick="
-            rockPaperScissors('Rock')  
-        ">Rock</button>
-        <button onclick="   
-            rockPaperScissors('Paper') 
-        ">Paper</button>
-        <button onclick="
-            rockPaperScissors('Scissors')     
-        ">Scissors</button>
+        <button onclick="rockPaperScissors('Rock')">Rock</button>
+        <button onclick="rockPaperScissors('Paper')">Paper</button>
+        <button onclick="rockPaperScissors('Scissors')">Scissors</button>
+
+        <p class="js-FinalResult"></p>
+
         <button onclick="
            localStorage.removeItem('score')
-            alert('Reset Score')
-        ">Reset Result</button>
+            score = {
+                        Win:0,
+                        Lose:0,
+                        Tie:0
+                    }
+            resultPage.innerHTML = ''
+        ">Reset Score</button>
         
         <script>
 
@@ -30,6 +32,7 @@
                         Tie:0
                     }
                 }
+            const resultPage = document.querySelector('.js-FinalResult')
             
             function rockPaperScissors(yourChoose){
                 const randomNum = Math.random()
@@ -59,7 +62,9 @@
 
                 localStorage.setItem('score',JSON.stringify(score))
 
-                alert(`You choose ${yourChoose}, Computer choose ${computerChoose}, ${result} \n Win: ${score.Win}, Lose: ${score.Lose}, Tie: ${score.Tie}` )
+                resultPage.innerHTML = `You ${yourChoose} - Computer ${computerChoose}. <br> 
+                ${result} <br>
+                Win: ${score.Win} - Lose: ${score.Lose} - Tie: ${score.Tie}`
             }
         </script>
     </body>
