@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <style>
+            .sub-bt{
+                border :none;
+                background-color: black;
+                color: white;
+                padding: 10px 15px 10px 15px;
+                font-weight: bold;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+            .is-subscribed{
+                background-color:rgb(240, 240, 240);
+                color: black;
+            }
+
+            body{
+                font-family: Arial;
+            }
+        </style>
+    </head> 
+    <p>Youtube Subscribe Button</p>
+    <button onclick="subcribe()" class="js-sub-bt sub-bt">Subscribe</button>
+
+    <p></p>
+    <body>  
+        <script>
+            function subcribe(){
+                const btSubEle = document.querySelector('.js-sub-bt')
+            
+                if(btSubEle.innerText === 'Subscribe'){
+                    btSubEle.innerHTML = 'Subscribed'
+                    btSubEle.classList.add('is-subscribed');
+                }
+                else{
+                    btSubEle.innerHTML = 'Subscribe'
+                    btSubEle.classList.remove('is-subscribed')
+                }
+            }
+        </script>
+    </body>
+
+</html>
