@@ -2,6 +2,26 @@
 <html>
     <head>
         <title>DOM</title>
+        <style>
+            .cost-input{
+                font-size: 15px;
+                padding: 10px 10px 10px 10px;
+                border-radius: 3px;
+                border: 1px solid black;
+            }
+            .cal-bt{
+                padding: 11px 10px 11px 10px;
+                font-size: 15px;
+                color: white;
+                background-color: green;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+           body{
+                font-family: Arial;
+            }
+        </style>
     </head> 
 
     <body>
@@ -9,7 +29,7 @@
         <p>Orders under $40 = + $10</p>
         <p>Orders over $40 = FREE shipping</p>
         <input class="js-Input cost-input" placeholder="Cost of order" onkeydown="keyDown(event)">
-        <button onclick="calFeeShip()">Calculator</button>
+        <button onclick="calFeeShip()" class="cal-bt">Calculator</button>
         <p class="js-Result"></p>
         <script>
             function calFeeShip() {
