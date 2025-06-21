@@ -1,0 +1,15 @@
+button{
+    font-family: Arial;
+    padding: 15px;
+    font-size: 16px;
+    background-color: rgb(245, 243, 243);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+ .is-clicked{
+                background-color:black;
+                color: white;
+            }
