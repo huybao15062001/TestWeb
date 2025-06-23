@@ -23,6 +23,7 @@ button{
     width: 90px;
     border: none;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .addBT{
