@@ -1,4 +1,7 @@
-const arrayList = [];
+const arrayList = JSON.parse(localStorage.getItem('todoList'))
+if (arrayList === ""){
+    arrayList = []
+}
 renderList()
 function renderList(){
     const jsResult = document.querySelector('.js-Result')
@@ -15,6 +18,7 @@ function renderList(){
         <button onclick="
                 arrayList.splice(${i},1);
                 renderList(); 
+                saveToStorage();
             " class="delBT">Delete</button>`
         todoListHTML +=html
     }
@@ -32,10 +36,15 @@ function submitBT(){
     if (nameValue !== '' && arrayList.date !== ''){
         arrayList.push({name: nameValue, date: dateValue});
         renderList()
+        saveToStorage()
     }
 
     jsInput.value = ''
     jsDate.value = ''
     
+}
+
+function saveToStorage(){
+    localStorage.setItem('todoList',JSON.stringify(arrayList))
 }
 

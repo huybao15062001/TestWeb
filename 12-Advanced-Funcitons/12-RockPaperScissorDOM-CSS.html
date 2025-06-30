@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style/12-RockPaperScissor.css">
+    </head> 
+
+    <body>
+        <p class="title">Rock Paper Scissors</p>
+        <button onclick="rockPaperScissors('rock')" class="move-Button"><img src="Image/rock-emoji.png" class="icon"></button>
+        <button onclick="rockPaperScissors('paper')" class="move-Button"><img src="Image/paper-emoji.png" class="icon"></button>
+        <button onclick="rockPaperScissors('scissors')" class="move-Button"><img src="Image/scissors-emoji.png" class="icon"></button>
+
+        <p class="js-FinalResult result"></p>
+
+        <button onclick="
+           localStorage.removeItem('score')
+            score = {
+                        Win:0,
+                        Lose:0,
+                        Tie:0
+                    }
+            resultPage.innerHTML = `Win: ${score.Win} - Lose: ${score.Lose} - Tie: ${score.Tie}`
+        " class="reset">Reset Score</button>
+
+        <button onclick="autoPlay()" class="reset">Auto Play</button>
+        
+        <script src="scripts/12-RockPaperScissor.js">      
+        </script>
+    </body>
+
+</html>
